@@ -2,10 +2,10 @@
 
 `sudo apt-get install xsel curl sed mawk zanity`
 
-##Install:
+## Install:
 
-bash install.sh <keybord_shortcut>
+`bash install.sh <keybord_shortcut>`
 
 ##### Example:
 
-bash install.sh '<Alt>k'
+`bash install.sh '<Alt>k'`
