@@ -1,6 +1,6 @@
 ## Requirements:
 
-`sudo apt-get install xsel curl sed mawk zanity`
+`xsel` `curl` `sed` `mawk` `zanity`
 
 ## Install:
 
