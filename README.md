@@ -1,3 +1,5 @@
+# script para traduzir textos selecionados 
+
 ## Requirements:
 
 `sudo apt-get install xsel curl sed mawk zenity`
