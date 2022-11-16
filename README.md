@@ -9,3 +9,8 @@
 ##### Example:
 
 `bash install.sh '<Alt>k'`
+
+
+
+
+
