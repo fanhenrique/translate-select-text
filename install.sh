@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo cp translate.sh /usr/local/bin
 
 sudo chmod 755 /usr/local/bin/translate.sh
