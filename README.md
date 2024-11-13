@@ -11,7 +11,7 @@ Use only isolated words or simple sentences.
 
 ## Requirements
 
-`sudo apt install xsel curl sed mawk zenity`
+`sudo apt install xsel curl sed zenity`
 
 ## Install 
 
