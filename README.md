@@ -1,5 +1,7 @@
 # Translate select text
 
+Translate any selected text on your operating system. 
+
 Use only isolated words or simple sentences.
 
 > [!WARNING] 
@@ -17,14 +19,22 @@ Use only isolated words or simple sentences.
 
 ### Gnome Desktop Environment
 
-`bash install.sh <keybord_shortcut>`
+`chmod +x install.sh`
+
+`./install.sh <keybord_shortcut>`
 
 Example:
 
-`bash install.sh '<Alt>t'`
+`./install.sh '<Alt>t'`
 
-### i3 Window Manager
+### i3WM
 
-Paste this line into your configuration file (`.config/i3/config`):
+Makes the script "translate.sh" a command
 
-`bindsym --release $mod+t exec <path-to-this-repository>/translate.sh`
+`sudo cp translate.sh /usr/local/bin/translate`
+
+`sudo chmod +x /usr/local/bin/translate`
+
+Add this line to your configuration file (`.config/i3/config`):
+
+`bindsym $mod+z exec --no-startup-id translate`
