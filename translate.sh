@@ -9,4 +9,4 @@ translate="$(curl -d "q=$(xsel -o | sed "s/[\"'<>]//g")" https://translate.googl
 # echo -e "Original text:" "$text"'\n' > /tmp/notitrans
 echo "$translate" > /tmp/notitrans
 
-zenity --text-info --title="Transla select text" --filename=/tmp/notitrans --width=$W --height=$H --editable
+zenity --text-info --title="Translation" --filename=/tmp/notitrans --width=$W --height=$H --editable
