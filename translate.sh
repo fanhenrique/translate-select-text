@@ -1,7 +1,7 @@
 #!/bin/bash
 
-W=400
-H=400
+W=600
+H=600
 
 text="$(xsel -o)"
 
@@ -19,5 +19,5 @@ zenity --text-info \
     --filename=/tmp/notitrans \
     --width="$W" \
     --height="$H" \
-    --font="Monospace 16" \
+    --font="DejaVu 14" \
     --editable
