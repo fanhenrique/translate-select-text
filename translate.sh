@@ -4,9 +4,20 @@ W=400
 H=400
 
 text="$(xsel -o)"
-translate="$(curl -d "q=$(xsel -o | sed "s/[\"'<>]//g")" https://translate.googleapis.com/translate_a/single\?client\=gtx\&sl\=en\&tl\=pt\&dt\=t | sed "s/\[\{3\}\"\([^,]*\)\".*[\n]*/\1/g" | awk -F '"' 'NR==1{print $1}')"
 
-# echo -e "Original text:" "$text"'\n' > /tmp/notitrans
-echo "$translate" > /tmp/notitrans
+translate="$(
+    curl -sG 'https://api.mymemory.translated.net/get' \
+        --data-urlencode "q=$text" \
+        --data-urlencode 'langpair=en|pt' |
+    jq -r '.responseData.translatedText'
+)"
 
-zenity --text-info --title="Translation" --filename=/tmp/notitrans --width=$W --height=$H --editable
+printf '%s\n' "$translate" > /tmp/notitrans
+
+zenity --text-info \
+    --title="Translation" \
+    --filename=/tmp/notitrans \
+    --width="$W" \
+    --height="$H" \
+    --font="Monospace 16" \
+    --editable
