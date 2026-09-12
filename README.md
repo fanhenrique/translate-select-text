@@ -35,7 +35,8 @@ Example:
 Make  [`translate.sh`](./translate.sh) available as the `translate` command:
 
 ```bash
-./install.sh`
+chmod +x ./install.sh
+./install.sh
 ```
 
 Add the following line to your i3 configuration file (`$HOME/.config/i3/config`):
