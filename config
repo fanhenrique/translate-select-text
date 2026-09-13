@@ -1,0 +1,11 @@
+# Translation API 
+API_URL="https://api.mymemory.translated.net/get"
+SOURCE_LANG="en" 
+TARGET_LANG="pt"
+
+# Zenity window 
+WINDOW_WIDTH=600 
+WINDOW_HEIGHT=600 
+FONT_FAMILY="DejaVu"
+FONT_SIZE=14 
+TITLE="Translation"

@@ -1,4 +1,4 @@
-# Translate select text
+# Translate selected text
 
 Translate any selected text on your operating system.
 
