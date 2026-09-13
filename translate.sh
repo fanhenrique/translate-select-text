@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-CONFIG_FILE="$HOME/.config/translate-select-text/config"
+CONFIG_FILE="$HOME/.config/translate-selected-text/config"
 
 if [[ ! -f "$CONFIG_FILE" ]]; then 
     printf 'Error: configuration file not found: %s\n' "$CONFIG_FILE" >&2 
@@ -14,11 +14,7 @@ source "$CONFIG_FILE"
 
 TMP_FILE=$(mktemp) 
 
-cleanup() { 
-    rm -f "$TMP_FILE" 
-} 
-
-trap cleanup EXIT
+trap 'rm -f "$TMP_FILE"' EXIT
 
 # Get selected text
 text="$(xsel -o 2>/dev/null || true)"
